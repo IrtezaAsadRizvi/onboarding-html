@@ -1,0 +1,440 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+/* -------------------------------------------------------------------------- */
+/* COLORS */
+/* font color #212121
+primary color : #445ae3
+input feild border volor : #bbbfc4
+input feild placeholder color : #bbbfc4
+grey font : #909ca8
+help section :
+backgound: #d0f2db
+title: #32a578
+details: #212121 */
+/* -------------------------------------------------------------------------- */
+/* Table of Content */
+/*
+- basic setup
+- responsiveness
+- helper class
+- onboarding page content
+- CUSTOM ELEMENT STYLE
+- bootstrap modifications
+*/
+/* -------------------------------------------------------------------------- */
+/*basic setup*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #212121;
+    outline:0px !important;
+    -webkit-appearance:none;
+    appearance:none;
+}
+html {
+}
+body {
+  background-color: #FFF;
+  background-image: url('../images/white logo icon.png');
+  background-position: bottom left;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+::placeholder {
+    color: #bbbfc4;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+   color: #bbbfc4;
+}
+
+::-ms-input-placeholder {
+   color: #bbbfc4;
+}
+/* -------------------------------------------------------------------------- */
+/* responsiveness */
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: none;
+  }
+  /* the title */
+  #on-boarding .ob-page-header{
+    background-image: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    height: auto;
+    font-size: 1.2em;
+    position: relative;
+    left: 15px;
+  }
+  div#on-boarding {
+    padding-top: 20px;
+    padding-bottom: 120px;
+  }
+  /* photo upload */
+  div.zone {
+    border: none;
+  }
+  div.zone label {
+    font-size: 0.9em;
+  }
+  /* illustration */
+  .illustration img {
+    display: none;
+  }
+
+  /* submit button */
+  div.ob-submit-container {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+    padding: 25px;
+  }
+}
+/* -------------------------------------------------------------------------- */
+/* helper class */
+.grey {
+  color: #909ca8;
+}
+.grey-bold {
+  color: #909ca8;
+  font-weight: 500;
+}
+label.label {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+
+.form-input {
+  border-radius: 2px;
+  border: 1.5px solid #bbbfc4;
+  padding: 15px 20px;
+  font-size: 0.9em;
+}
+.form-input:active, .form-input:focus{
+  border-color: #445ae3;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* -------------------------------------------------------------------------- */
+/* onboarding page content */
+#on-boarding{
+  padding-top: 80px;
+}
+.ob-page-header{
+  max-width: 480px;
+  width: 100%;
+  height: 110px;
+  background-image: url('../images/color logo icon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 2.1em;
+  font-weight: 400;
+  margin: 0 auto;
+}
+/* progress */
+#progress {
+  font-size: 1.3em;
+  padding: 50px 0px 0px 0px;
+}
+#progress li {
+  list-style: none;
+  color: #bbbfc4;
+}
+span.progress-num{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  color: #909ca8;
+  padding: 2px 0px;
+  margin: 0px 20px;
+  border: 1px solid #bbbfc4;
+}
+#progress li.active{
+  color: #212121;
+}
+#progress li.active span.progress-num{
+  background-color: #445ae3;
+  color: #fff;
+  border: none;
+}
+.right-arrow img{
+  width: 25px;
+  height: auto;
+}
+
+/* steps */
+.steps{
+  position: relative;
+}
+.steps:not(:first-of-type){
+  display: none;
+}
+.steps.slide-out{
+  /* transform: translateX(-100%); */
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+/* the form */
+.ob-form{
+  padding-top: 20px;
+  position: relative;
+}
+
+/* photo upload */
+.zone {
+  width: 100%;
+  height: auto;
+  border: 1.5px dashed #445ae3;
+  text-align: center;
+  z-index: 20;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.zone .ob-selectFile {
+  height: 35px;
+  margin: 20px auto;
+  position: relative;
+  width: 150px;
+}
+.zone #dropZ label,
+.zone #fileinput {
+  cursor: pointer;
+  display: block;
+  height: 35px;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.zone label {
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 33px;
+  padding: 0;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: #fff;
+  color: #445ae3;
+  border: 1.5px solid #445ae3;
+}
+.zone input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.zone.in {
+  color: white;
+  border-color: white;
+  background: #445ae3;
+}
+.zone.in i {
+  color: #fff;
+}
+.zone.in label {
+  background: #fff;
+  color: #445ae3;
+}
+/* .zone.hover {
+  color: #fff;
+  background: #445ae3;
+}
+.zone.hover i {
+  color: #445ae3;
+}
+.zone.hover label {
+  background: #fff;
+  color: #445ae3;
+} */
+.zone.fade {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  opacity: 1;
+}
+.zone span{
+  margin: none;
+  padding: none;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+.zone #upload-icon img{
+  margin: 10px auto;
+  width: 30px;
+  height: auto;
+}
+.zone #upload-icon img:nth-child(2){
+  width: 100px;
+  height: auto;
+}
+.zone p{
+  margin-bottom: 0;
+}
+
+.ob-form {
+  position: relative;
+}
+/* submit button */
+.ob-submit {
+  color: #FFF;
+  background-color: #445ae3;
+  padding: 15px 20px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 500;
+  line-height: 1.6em;
+}
+.ob-submit-icon img{
+  width: 20px;
+  height: auto;
+  margin-left: 10px;
+}
+/* submit alert */
+.submit-alert-container {
+  border: none;
+}
+.submit-alert {
+  background-color: #d0f2db;
+}
+.submit-alert strong {
+  color: #32a578;
+  margin: 20px 0px;
+}
+
+/* ILLUSTRATION */
+.illustration{
+  max-width: 1500px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.illustration img {
+  width: 100%;
+  height: auto;
+}
+/* -------------------------------------------------------------------------- */
+/* CUSTOM ELEMENT STYLE */
+/* radio button */
+.radio {
+    display: inline-block;
+    padding-left: 35px;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.radio:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.radio input:checked ~ .checkmark {
+    background-color: #445ae3;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio input:checked ~ .checkmark:after {
+    display: block;
+}
+.radio .checkmark:after {
+ 	top: 5px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: white;
+}
+/* custom select */
+.select {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 0.9em;
+}
+.select select {
+  width: 100%;
+  display: inline-block;
+  border: 1.5px solid #bbbfc4;
+  padding: 4px 3px 3px 5px;
+  margin: 0;
+  font: inherit;
+  outline:none;
+  line-height: 1.2;
+  -webkit-appearance:none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 2px;
+  padding: 15px 20px;
+}
+.select select option:nth-child(1) {
+  color: #bbbfc4;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .select select {
+    padding-right:30px;
+  }
+}
+.select select:focus {
+  border: 1.5px solid #445ae3;
+}
+.select .down-arrow{
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  padding: 0;
+  padding: 15px 20px;
+  width: 20px;
+  height: auto;
+  pointer-events:none;
+  -webkit-border-radius: 0 6px 6px 0;
+  -moz-border-radius: 0 6px 6px 0;
+  border-radius: 0 6px 6px 0;
+  color: #bbbfc4;
+}
+.select .down-arrow img{
+  width: 20px;
+  height: auto;
+}
+.no-pointer-events .select:after {
+  content: none;
+}
+/* -------------------------------------------------------------------------- */
+/* bootstrap modifications */
+.form-control {
+  outline: none;
+}

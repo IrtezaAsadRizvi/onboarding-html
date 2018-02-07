@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Onboarding</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- all the CDNs are tobe removes later -->
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- scripts -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  </head>
+  <body>
+    <div id="on-boarding">
+      <div class="container">
+        <div class="row">
+          <div class="ob-page-header">Get work in just few steps</div>
+          <!-- progress -->
+          <div class="col-12">
+            <ul id="progress" class="d-flex justify-content-around">
+              <li class="progress-step active" class="d-flex align-items-center active"><span class="progress-num">1</span> Personal Info</li>
+              <div class="right-arrow"><img src="images/arrow-point-to-right.svg" alt=""></div>
+              <li class="progress-step" class="d-flex align-items-center"><span class="progress-num">1</span> Service Info</li>
+              <div class="right-arrow"><img src="images/arrow-point-to-right.svg" alt=""></div>
+              <li class="progress-step" class="d-flex align-items-center"><span class="progress-num">1</span> NID Info</li>
+            </ul>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-0">
+            <form class="ob-form">
+              <!-- step 1 -->
+              <div class="steps" id="step1">
+                <!-- file drag and drop -->
+                <div class="form-group">
+                  <label for="" class="label d-none d-sm-none d-md-block">Profile Image</label>
+                  <div class="zone">
+                    <div id="dropZ">
+                      <div id="upload-icon">
+                        <img class="d-none d-sm-none d-md-block"src="images/upload.svg" alt="">
+                        <img class="d-xm-block d-sm-block d-md-none d-lg-none d-xl-none"src="images/user.jpg" alt="">
+                      </div>
+                      <p class="grey-bold d-none d-sm-none d-md-block">Drag and drop photo here</p>
+                      <span class="grey d-none d-sm-none d-md-block">or</span>
+                      <div class="ob-selectFile">
+                        <label for="file">Upload Photo</label>
+                        <input type="file" id="fileinput">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Name -->
+                <div class="form-group">
+                  <label for="name" class="label">Name</label>
+                  <input type="email" class="form-control form-input" name="name" placeholder="Full Name">
+                </div>
+                <!-- Gender -->
+                <div class="form-group">
+                  <label for="gender" class="label">Gender</label><br>
+                  <div class="container row">
+                    <label class="radio col">Male
+                      <input type="radio" checked="checked" name="gender" value="male">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio col">Female
+                      <input type="radio" checked="checked" name="gender" value="female">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio col">Other
+                      <input type="radio" checked="checked" name="gender" value="other">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <!-- Contact number -->
+                <div class="form-group">
+                  <label for="contact_number" class="label">Contact number</label>
+                  <input type="text" class="form-control form-input" name="name" placeholder="Valid number">
+                </div>
+                <!-- Area -->
+                <div class="form-group">
+                  <label for="name" class="label">Area</label>
+                  <div class="select">
+                      <select>
+                          <option selected disabled>Select your area</option>
+                          <option>Mirpur</option>
+                          <option>Dhanmondi</option>
+                          <option>Banani</option>
+                      </select>
+                      <div class="down-arrow"><img src="images/arrow-down.svg" alt="&#709;"></div>
+                  </div>
+                </div>
+                <!-- Address -->
+                <div class="form-group">
+                  <label for="name" class="label">Address</label>
+                  <textarea name="address" class="form-control form-input" rows="4" placeholder="Type your address here"></textarea>
+                </div>
+                <!-- Next step button -->
+                <div class="form-group ob-submit-container">
+                  <div class="btn btn-block ob-submit">Service Infromation <span class="ob-submit-icon"><img src="images/right-arrow.svg" alt="&#709;"></span> </div>
+                </div>
+              </div>
+              <!-- end of step 1 -->
+              <!-- step 2 -->
+              <div class="steps" id="step2">
+                <!-- file drag and drop -->
+                <!-- Name -->
+                <div class="form-group">
+                  <label for="name" class="label">Name</label>
+                  <input type="email" class="form-control form-input" name="name" placeholder="Full Name">
+                </div>
+                <!-- Gender -->
+                <div class="form-group">
+                  <label for="gender" class="label">Gender</label><br>
+                  <div class="container row">
+                    <label class="radio col">Male
+                      <input type="radio" checked="checked" name="gender" value="male">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio col">Female
+                      <input type="radio" checked="checked" name="gender" value="female">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio col">Other
+                      <input type="radio" checked="checked" name="gender" value="other">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <!-- Contact number -->
+                <div class="form-group">
+                  <label for="contact_number" class="label">Contact number</label>
+                  <input type="text" class="form-control form-input" name="name" placeholder="Valid number">
+                </div>
+                <!-- Area -->
+                <div class="form-group">
+                  <label for="name" class="label">Area</label>
+                  <div class="select">
+                      <select>
+                          <option selected disabled>Select your area</option>
+                          <option>Mirpur</option>
+                          <option>Dhanmondi</option>
+                          <option>Banani</option>
+                      </select>
+                      <div class="down-arrow"><img src="images/arrow-down.svg" alt="&#709;"></div>
+                  </div>
+                </div>
+                <!-- Address -->
+                <div class="form-group">
+                  <label for="name" class="label">Address</label>
+                  <textarea name="address" class="form-control form-input" rows="4" placeholder="Type your address here"></textarea>
+                </div>
+                <!-- Next step button -->
+                <div class="form-group ob-submit-container">
+                  <div class="btn btn-block ob-submit">Service Infromation <span class="ob-submit-icon"><img src="images/right-arrow.svg" alt="&#709;"></span> </div>
+                </div>
+              </div>
+              <!-- end of step 2 -->
+              <!-- step 3 -->
+              <div class="steps" id="step3">
+                <!-- file drag and drop -->
+                <!-- Name -->
+                <div class="form-group">
+                  <label for="name" class="label">Name</label>
+                  <input type="email" class="form-control form-input" name="name" placeholder="Full Name">
+                </div>
+                <!-- Gender -->
+                <div class="form-group">
+                  <label for="gender" class="label">Gender</label><br>
+                  <div class="container row">
+                    <label class="radio col">Male
+                      <input type="radio" checked="checked" name="gender" value="male">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio col">Female
+                      <input type="radio" checked="checked" name="gender" value="female">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio col">Other
+                      <input type="radio" checked="checked" name="gender" value="other">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <!-- Contact number -->
+                <div class="form-group">
+                  <label for="contact_number" class="label">Contact number</label>
+                  <input type="text" class="form-control form-input" name="name" placeholder="Valid number">
+                </div>
+                <!-- Area -->
+                <div class="form-group">
+                  <label for="name" class="label">Area</label>
+                  <div class="select">
+                      <select>
+                          <option selected disabled>Select your area</option>
+                          <option>Mirpur</option>
+                          <option>Dhanmondi</option>
+                          <option>Banani</option>
+                      </select>
+                      <div class="down-arrow"><img src="images/arrow-down.svg" alt="&#709;"></div>
+                  </div>
+                </div>
+                <!-- Address -->
+                <div class="form-group">
+                  <label for="name" class="label">Address</label>
+                  <textarea name="address" class="form-control form-input" rows="4" placeholder="Type your address here"></textarea>
+                </div>
+                <!-- Next step button -->
+                <div class="form-group ob-submit-container">
+                  <div class="btn btn-block ob-submit" onclick="">Service Infromation <span class="ob-submit-icon"><img src="images/right-arrow.svg" alt="&#709;"></span> </div>
+                </div>
+              </div>
+              <!-- end of step 3 -->
+            </form>
+          </div>
+          <!-- end of form div -->
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 submit-alert-container">
+            <div class="alert alert-success submit-alert" role="alert">
+              <!-- icon here --><strong>Why we need this information?</strong><br>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="illustration"><img src="images/illustration.png" alt=""></div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
