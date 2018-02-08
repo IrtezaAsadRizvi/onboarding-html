@@ -127,41 +127,12 @@
               <!-- end of step 1 -->
               <!-- step 2 -->
               <div class="steps" id="step2">
-                <!-- file drag and drop -->
-                <!-- Name -->
+                <!-- Service Area -->
                 <div class="form-group">
-                  <label for="name" class="label">Name</label>
-                  <input type="email" class="form-control form-input" name="name" placeholder="Full Name">
-                </div>
-                <!-- Gender -->
-                <div class="form-group">
-                  <label for="gender" class="label">Gender</label><br>
-                  <div class="container row">
-                    <label class="radio col">Male
-                      <input type="radio" checked="checked" name="gender" value="male">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="radio col">Female
-                      <input type="radio" checked="checked" name="gender" value="female">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="radio col">Other
-                      <input type="radio" checked="checked" name="gender" value="other">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-                <!-- Contact number -->
-                <div class="form-group">
-                  <label for="contact_number" class="label">Contact number</label>
-                  <input type="text" class="form-control form-input" name="name" placeholder="Valid number">
-                </div>
-                <!-- Area -->
-                <div class="form-group">
-                  <label for="name" class="label">Area</label>
+                  <label for="name" class="label">Service Area</label>
                   <div class="select">
                       <select>
-                          <option selected disabled>Select your area</option>
+                          <option selected disabled>Select service area</option>
                           <option>Mirpur</option>
                           <option>Dhanmondi</option>
                           <option>Banani</option>
@@ -169,14 +140,36 @@
                       <div class="down-arrow"><img src="images/arrow-down.svg" alt="&#709;"></div>
                   </div>
                 </div>
-                <!-- Address -->
+                <!-- Expertise -->
                 <div class="form-group">
-                  <label for="name" class="label">Address</label>
-                  <textarea name="address" class="form-control form-input" rows="4" placeholder="Type your address here"></textarea>
+                  <label for="name" class="label">Expertise</label>
+                  <label for="name" class="label sub-label">Select your expertise</label>
+                  <div class="expertise-container d-flex justify-content-around">
+                    <div class="expertise">
+                        <img src="images/repair.svg" alt="repair">
+                        <p>Repair</p>
+                    </div>
+                    <div class="expertise">
+                        <img src="images/repair.svg" alt="repair">
+                        <p>Repair</p>
+                    </div>
+                    <div class="expertise">
+                        <img src="images/repair.svg" alt="repair">
+                        <p>Repair</p>
+                    </div>
+                    <div class="expertise">
+                        <img src="images/repair.svg" alt="repair">
+                        <p>Repair</p>
+                    </div>
+                    <div class="expertise">
+                        <img src="images/repair.svg" alt="repair">
+                        <p>Repair</p>
+                    </div>
+                  </div>
                 </div>
                 <!-- Next step button -->
                 <div class="form-group ob-submit-container">
-                  <div class="container">
+                  <div class="container ob-submit-subcontainer">
                     <div class="row">
                       <div class="col-12">
                         <div class="btn btn-block ob-submit">Service Infromation <span class="ob-submit-icon"><img src="images/right-arrow.svg" alt="&#709;"></span> </div>
@@ -188,56 +181,38 @@
               <!-- end of step 2 -->
               <!-- step 3 -->
               <div class="steps" id="step3">
-                <!-- file drag and drop -->
+                <p>You are just one step away from completing your profile</p>
                 <!-- Name -->
                 <div class="form-group">
-                  <label for="name" class="label">Name</label>
-                  <input type="email" class="form-control form-input" name="name" placeholder="Full Name">
+                  <label for="name" class="label">NID Number</label>
+                  <label for="name" class="label sub-label">Enter your NID card number</label>
+                  <input type="email" class="form-control form-input" name="name" placeholder="NID Number">
                 </div>
-                <!-- Gender -->
+
+                <!-- file drag and drop -->
                 <div class="form-group">
-                  <label for="gender" class="label">Gender</label><br>
-                  <div class="container row">
-                    <label class="radio col">Male
-                      <input type="radio" checked="checked" name="gender" value="male">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="radio col">Female
-                      <input type="radio" checked="checked" name="gender" value="female">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="radio col">Other
-                      <input type="radio" checked="checked" name="gender" value="other">
-                      <span class="checkmark"></span>
-                    </label>
+                  <label for="" class="label d-none d-sm-none d-md-block">NID Attachment</label>
+                  <label for="name" class="label sub-label">Enter your NID card number</label>
+                  <div class="zone">
+                    <div id="dropZ">
+                      <div id="upload-icon">
+                        <img class="d-none d-sm-none d-md-block"src="images/upload.svg" alt="">
+                        <img class="d-xm-block d-sm-block d-md-none d-lg-none d-xl-none"src="images/user.jpg" alt="">
+                      </div>
+                      <p class="grey-bold d-none d-sm-none d-md-block">Drag and drop photo here</p>
+                      <span class="grey d-none d-sm-none d-md-block">or</span>
+                      <div class="ob-selectFile">
+                        <label for="file">Upload Photo</label>
+                        <input type="file" id="fileinput">
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <!-- Contact number -->
-                <div class="form-group">
-                  <label for="contact_number" class="label">Contact number</label>
-                  <input type="text" class="form-control form-input" name="name" placeholder="Valid number">
-                </div>
-                <!-- Area -->
-                <div class="form-group">
-                  <label for="name" class="label">Area</label>
-                  <div class="select">
-                      <select>
-                          <option selected disabled>Select your area</option>
-                          <option>Mirpur</option>
-                          <option>Dhanmondi</option>
-                          <option>Banani</option>
-                      </select>
-                      <div class="down-arrow"><img src="images/arrow-down.svg" alt="&#709;"></div>
-                  </div>
-                </div>
-                <!-- Address -->
-                <div class="form-group">
-                  <label for="name" class="label">Address</label>
-                  <textarea name="address" class="form-control form-input" rows="4" placeholder="Type your address here"></textarea>
-                </div>
+
+                <p><small>By clicking submit I agree to these <a class="link" href="">terms and conditions</a></small></p>
                 <!-- Next step button -->
                 <div class="form-group ob-submit-container">
-                  <div class="container" >
+                  <div class="container ob-submit-subcontainer" >
                     <div class="row">
                       <div class="col-12">
                         <div class="btn btn-block ob-submit">Service Infromation <span class="ob-submit-icon"><img src="images/right-arrow.svg" alt="&#709;"></span> </div>
