@@ -25,8 +25,8 @@
       <div class="container">
         <div class="row">
           <div class="ob-page-header">Get work in just few steps</div>
-          <!-- progress -->
-          <div class="col-12">
+          <!-- progress steps -->
+          <div class="col-12 d-none d-sm-none d-md-block">
             <ul id="progress" class="d-flex justify-content-around">
               <li class="progress-step active" class="d-flex align-items-center active"><span class="progress-num">1</span> Personal Info</li>
               <div class="right-arrow"><img src="images/arrow-point-to-right.svg" alt=""></div>
@@ -34,6 +34,16 @@
               <div class="right-arrow"><img src="images/arrow-point-to-right.svg" alt=""></div>
               <li class="progress-step" class="d-flex align-items-center"><span class="progress-num">1</span> NID Info</li>
             </ul>
+          </div>
+          <!-- progress bar -->
+          <div class="col-12 d-xm-block d-sm-block d-md-none d-lg-none d-xl-none">
+            <div class="d-flex justify-content-end">
+              <p id="progress-percentage">33%</p>
+            </div>
+            <div id="progress-bar">
+              <div id="progress-bar-fill"></div>
+            </div>
+            <p id="progress-bar-steps">STEP 1 OF 3 : PERSONAL INFO</p>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 offset-xl-4 offset-lg-4 offset-md-3 offset-sm-0">
             <form class="ob-form">
@@ -104,8 +114,14 @@
                   <textarea name="address" class="form-control form-input" rows="4" placeholder="Type your address here"></textarea>
                 </div>
                 <!-- Next step button -->
-                <div class="form-group ob-submit-container">
-                  <div class="btn btn-block ob-submit">Service Infromation <span class="ob-submit-icon"><img src="images/right-arrow.svg" alt="&#709;"></span> </div>
+                <div class="form-group ob-submit-container text-center">
+                  <div class="container ob-submit-subcontainer">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="btn btn-block ob-submit">Service Infromation <span class="ob-submit-icon"><img src="images/right-arrow.svg" alt="&#709;"></span> </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- end of step 1 -->
@@ -160,7 +176,13 @@
                 </div>
                 <!-- Next step button -->
                 <div class="form-group ob-submit-container">
-                  <div class="btn btn-block ob-submit">Service Infromation <span class="ob-submit-icon"><img src="images/right-arrow.svg" alt="&#709;"></span> </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="btn btn-block ob-submit">Service Infromation <span class="ob-submit-icon"><img src="images/right-arrow.svg" alt="&#709;"></span> </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- end of step 2 -->
@@ -215,7 +237,13 @@
                 </div>
                 <!-- Next step button -->
                 <div class="form-group ob-submit-container">
-                  <div class="btn btn-block ob-submit" onclick="">Service Infromation <span class="ob-submit-icon"><img src="images/right-arrow.svg" alt="&#709;"></span> </div>
+                  <div class="container" >
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="btn btn-block ob-submit">Service Infromation <span class="ob-submit-icon"><img src="images/right-arrow.svg" alt="&#709;"></span> </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- end of step 3 -->

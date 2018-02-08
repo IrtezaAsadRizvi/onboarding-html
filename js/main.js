@@ -1,20 +1,23 @@
 
-//jQuery time
+// STEP TRANSITION
 var current_fs, next_fs;
 var current_step;
 
 $(".ob-submit").click(function(){
-  current_fs = $(this).parent().parent();
-	next_fs = $(this).parent().parent().next();
+  current_fs = $(this).parent().parent().parent().parent().parent();
+  next_fs = $(this).parent().parent().parent().parent().parent().next();
   current_fs.addClass('slide-out').delay(300).hide();
   next_fs.fadeIn(300);
 
-  console.log($(this).parent().parent().next().index());
-
-  $(".progress-step").eq($(this).parent().parent().index()).removeClass('active')
-  $(".progress-step").eq($(this).parent().parent().next().index()).addClass('active')
-
+  console.log($(this).parent().parent().parent().parent().parent().next().index());
+  // progress step web
+  $(".progress-step").eq(current_fs.index()).removeClass('active')
+  $(".progress-step").eq(next_fs.index()).addClass('active')
+  // progress bar fill
+  $("#progress-bar-fill").css('width', (($(this).parent().parent().parent().parent().parent().next().index() + 1)*33.33)+'%')
 })
+
+
 
 // $(document).bind('dragover', function (e) {
 //     // FILE UPLOAD
